@@ -275,19 +275,8 @@ established.
 
 If multiple DNS server addresses are configured for the current
 network, the client may have the option of sending its DNS queries
-over IPv4 or IPv6. In keeping with the Happy Eyeballs approach,
-queries SHOULD be sent over IPv6 first (note that this is not
-referring to the sending of AAAA or A queries, but rather the address
-of the DNS server itself and IP version used to transport DNS
-messages). If DNS queries sent to the IPv6 address do not receive
-responses, that address may be marked as penalized and queries can be
-sent to other DNS server addresses.
-
-As native IPv6 deployments become more prevalent and IPv4 addresses
-are exhausted, it is expected that IPv6 connectivity will have
-preferential treatment within networks. If a DNS server is
-configured to be accessible over IPv6, IPv6 should be assumed to be
-the preferred address family.
+over IPv4 or IPv6. Guidelines for DNS stub resolvers in this
+scenario are described in {{Section 4.3 of ?I-D.ietf-dnsop-3901bis}}.
 
 Client systems SHOULD NOT have an explicit limit to the number of DNS
 servers that can be configured, either manually or by the network.
